@@ -1,0 +1,5 @@
+streamlit>=1.30.0
+fpdf>=1.7.2
+pandas>=2.1.0
+pymongo
+pyvis>=0.2.1
