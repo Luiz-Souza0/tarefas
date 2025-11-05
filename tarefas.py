@@ -96,7 +96,7 @@ if submit and nova_tarefa.strip():
     id_tarefa, tarefa = adicionar_tarefa(nova_tarefa, data_inicio)
     st.session_state.tarefas[id_tarefa] = tarefa
     st.success("✅ Tarefa adicionada com sucesso!")
-    st.experimental_rerun()
+    st.rerun()
 
 # -------------------------------
 # LISTAGEM DE TAREFAS
@@ -142,11 +142,11 @@ else:
                     st.session_state.tarefas[id_tarefa]["texto"] = novo_texto
                     atualizar_tarefa(id_tarefa, "texto", novo_texto)
                     st.session_state.editando = None
-                    st.experimental_rerun()
+                    st.rerun()
             else:
                 if st.button("Editar", key=f"edit_{id_tarefa}"):
                     st.session_state.editando = id_tarefa
-                    st.experimental_rerun()
+                    st.rerun()
 
         with cols[4]:
             if st.button("Excluir", key=f"del_{id_tarefa}"):
@@ -154,4 +154,4 @@ else:
                 del st.session_state.tarefas[id_tarefa]
                 if st.session_state.editando == id_tarefa:
                     st.session_state.editando = None
-                st.experimental_rerun()
+                st.rerun()
