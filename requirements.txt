@@ -1,5 +1,3 @@
-streamlit>=1.30.0
-fpdf>=1.7.2
-pandas>=2.1.0
-pymongo
-pyvis>=0.2.1
+streamlit>=1.38.0
+supabase>=2.4.0
+python-dotenv>=1.0.0
